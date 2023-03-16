@@ -1,0 +1,106 @@
+@import "./variables";
+@import "./header";
+@import "./content";
+@import "./nav";
+@import "./preview";
+
+html {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--textColor);
+}
+
+body {
+  background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+// class for the elementes, when we will search for the specific country
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1250px;
+    margin-bottom: 2rem;
+    position: relative;
+
+    .country-nav {
+      .input-container {
+        width: 400px;
+      }
+
+      .dropdown {
+        position: absolute;
+        right: 0 + $navPadding;
+        top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    
+    .preview-main {
+      //@include flex(center, center);
+      //flex-direction: row;
+      display: grid;
+      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      max-width: $maxWidth;
+      display: none;
+      gap: 2rem;
+      
+
+      img {
+        max-width: 800px;
+      }
+
+      .preview-desc {
+        margin-top: 0;
+
+        .layers-container {         
+          max-width: 500px;
+
+          .first-second-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            //width: 500px;
+          }
+
+          .thrd-layer-des {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+
+            h3 {
+              white-space: nowrap;
+              font-size: 1rem;
+              margin-top: 0.5rem;
+            }
+            
+            .borders {
+              display: flex;
+              justify-content: flex-start;
+              gap: clamp(0.75rem, 2vw, 1.5rem);
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}

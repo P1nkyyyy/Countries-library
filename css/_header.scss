@@ -1,0 +1,33 @@
+header {
+  background-color: var(--element);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  .header-container {
+    @include flex(space-between, center);
+    padding: 0 2rem;
+    min-height: 6rem;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    h1 {
+      font-size: clamp(1rem, 4vw, 1.15rem);
+      font-weight: 600;
+    }
+
+    .mode-switch {
+      @include flex(none, center);
+      cursor: pointer;
+      
+      svg {
+        width: 17px;
+        height: 17px;
+        fill: var(--textColor);
+      }
+ 
+      p {
+        padding-left: 0.5rem;
+        font-size: clamp(1rem, 4vw, 1.15rem);
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countries library</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body id="countries-body">
+  <header>
+    <div class="header-container">
+      <h1>Where in the world?</h1>
+      <div class="mode-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="moon-svg">
+          <path
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+          viewBox="0 0 47.576 47.576" xml:space="preserve" class="sun-svg">
+          <path
+            d="M24.235,12.13c-6.478,0-11.748,5.269-11.748,11.748s5.27,11.747,11.748,11.747s11.748-5.27,11.748-11.747   S30.713,12.13,24.235,12.13z M24.235,33.275c-5.182,0-9.398-4.216-9.398-9.397c0-5.183,4.216-9.397,9.398-9.397   c5.183,0,9.397,4.217,9.397,9.397C33.632,29.06,29.418,33.275,24.235,33.275z M23.06,6.485V1.589c0-0.649,0.526-1.174,1.175-1.174   c0.648,0,1.175,0.525,1.175,1.174v4.896c0,0.648-0.528,1.175-1.175,1.175C23.586,7.66,23.06,7.133,23.06,6.485z M35.095,13.287   c-0.459-0.458-0.459-1.202,0-1.661l4.209-4.209c0.459-0.458,1.203-0.458,1.662,0c0.459,0.459,0.459,1.203,0,1.661l-4.209,4.209   c-0.229,0.229-0.528,0.344-0.83,0.344C35.627,13.631,35.326,13.516,35.095,13.287z M5.63,9.078c-0.458-0.458-0.458-1.202,0-1.661   c0.459-0.458,1.203-0.458,1.661,0l4.21,4.209c0.458,0.459,0.458,1.204,0,1.661c-0.229,0.229-0.53,0.344-0.83,0.344   c-0.301,0-0.602-0.115-0.831-0.344L5.63,9.078z M24.472,41.091v4.896c0,0.649-0.525,1.175-1.173,1.175   c-0.649,0-1.175-0.527-1.175-1.175v-4.896c0-0.649,0.526-1.176,1.175-1.176C23.947,39.915,24.472,40.441,24.472,41.091z    M12.437,34.288c0.459,0.458,0.459,1.202,0,1.661l-4.209,4.21c-0.229,0.23-0.53,0.346-0.831,0.346c-0.3,0-0.601-0.117-0.83-0.346   c-0.459-0.458-0.459-1.203,0-1.662l4.209-4.209C11.235,33.829,11.978,33.829,12.437,34.288z M41.902,38.497   c0.459,0.459,0.459,1.202,0,1.662c-0.229,0.23-0.527,0.346-0.83,0.346c-0.299,0-0.601-0.117-0.83-0.346l-4.209-4.21   c-0.459-0.459-0.459-1.202,0-1.661s1.201-0.459,1.66,0L41.902,38.497z M6.461,25.054H1.175C0.526,25.054,0,24.526,0,23.878   s0.526-1.176,1.175-1.176h5.286c0.649,0,1.175,0.527,1.175,1.176C7.635,24.526,7.11,25.052,6.461,25.054z M47.576,23.878   c0,0.649-0.526,1.176-1.174,1.176h-6.267c-0.649,0-1.176-0.527-1.176-1.176s0.526-1.176,1.176-1.176h6.267   C47.05,22.702,47.576,23.228,47.576,23.878z" />
+        </svg>
+        <p class="text-mode">Light Mode</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <!--NAVIGATION FOR COUNTRIES PAGE-->
+    <div class="country-nav">
+      <div class="input-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+        </svg>
+        <input type="text" class="search-input" placeholder="Search for a country..." />
+      </div>
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">Filter by Region</span>
+          <div class="arrow"></div>
+        </div>
+        <ul class="menu">
+          <li>All</li>
+          <li>Africa</li>
+          <li>America</li>
+          <li>Asia</li>
+          <li>Europe</li>
+          <li>Oceania</li>
+        </ul>
+      </div>
+    </div>
+    <!--NAVIGATION FOR COUNTRY PREVIEW PAGE-->
+    <div class="preview-nav">
+      <a href="#" class="back-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+        </svg>
+        <span class="back-btn">Back</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="preview-main">
+      <img src="" alt="" />
+      <div class="preview-desc">
+        <h2 class="preview-country-name"><!--live data--></h2>
+        <div class="layers-container">
+          <div class="first-second-container">
+            <div class="first-layer-des layer">
+              <p>Native Name: <span class="preview-native-name"><!--live data--></span></p>
+              <p>Population: <span class="preview-population"><!--live data--></span></p>
+              <p>Region: <span class="preview-region"><!--live data--></span></p>
+              <p>Sub Region: <span class="preview-sub-region"><!--live data--></span></p>
+              <p>Capital: <span class="preview-capital"><!--live data--></span></p>
+            </div>
+            <div class="sec-layer-des layer">
+              <p>Top Level Domain: <span class="tld"><!--live data--></span></p>
+              <p>Currencies: <span class="currency"><!--live data--></span></p>
+              <p>
+                Languages: <span class="languages">ewqeqweqw<!--live data--></span>
+              </p>
+            </div>
+          </div>
+          <div class="thrd-layer-des layer">
+            <h3>Border Countries:</h3>
+            <ul class="borders">
+              <!--live data-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="countries">
+      <!--Live data will be loaded here-->
+    </div>
+  </main>
+
+  <template class="data-country-template">
+    <section class="country">
+      <a href="#">
+        <img src="" alt="flag" />
+        <div class="country-container">
+          <h3 class="country-name" data-name></h3>
+          <div class="country-description">
+            <p>Population: <span class="population"></span></p>
+            <p>Region: <span class="region"></span></p>
+            <p>Capital: <span class="capital"></span></p>
+          </div>
+        </div>
+      </a>
+    </section>
+  </template>
+
+  <script src="./js/main.js" defer></script>
+  <script src="./js/dark_mode.js"></script>
+</body>
+
+</html>

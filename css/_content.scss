@@ -1,0 +1,56 @@
+main {
+  @include flex(center, center);
+
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: $maxWidth;
+
+  .countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    z-index: 100;
+    gap: 2rem;
+    width: 100%;
+    .country {
+      background-color: var(--element);
+      border-radius: 0.4em;
+      box-shadow: $boxShadow;
+      transition: transform 150ms;
+      justify-self: stretch;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      a {
+        color: inherit;
+
+        img {
+          border-top-left-radius: 0.4em;
+          border-top-right-radius: 0.4em;
+          width: 100%;
+          aspect-ratio: 3/2;
+          object-fit: cover;
+        }
+
+        .country-container {
+          padding: 1rem 1.5rem 2rem 1.5rem;
+
+          h3 {
+            margin-bottom: 1.25rem;
+          }
+
+          p {
+            margin-bottom: 0.45rem;
+            font-weight: 600;
+          }
+          span {
+            color: var(--greyTextColor);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

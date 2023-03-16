@@ -1,0 +1,89 @@
+nav {
+  margin: 2rem auto 9rem auto;
+  padding: 0 $navPadding;
+
+  .country-nav {
+    .input-container {
+      background-color: var(--element);
+      @include flex(none, center);
+      padding: 0 1.5rem;
+      box-shadow: $boxShadow;
+
+      .search-input {
+        border: none;
+        background-color: inherit;
+        padding: $navElementsPadding 0;
+        width: 100%;
+
+        outline: none;
+        color: var(--textColor);
+        &::placeholder {
+          color: var(--greyTextColor);
+        }
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: var(--textColor);
+        padding-right: 1.5rem;
+      }
+    }
+
+    .dropdown {
+      width: 14rem;
+      position: absolute;
+      top: 13rem;
+      
+
+      .select {
+        background-color: var(--element);
+        padding: $navElementsPadding $padLeftFilter;
+        margin-bottom: 0.35rem;
+        border-radius: $borderRadiusFilter;
+        @include flex(space-between, center);
+        cursor: pointer;
+        box-shadow: $boxShadow;
+
+        .arrow {
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 6px solid var(--textColor);
+        }
+      }
+
+      .menu {
+        background-color: var(--element);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: $borderRadiusFilter;
+        pointer-events: none;
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+        opacity: 0;
+        transform: translateY(-15px);
+        position: relative;
+        z-index: 99;
+
+        li {
+          font-size: 0.9rem;
+          cursor: pointer;
+          padding-left: $padLeftFilter;
+          padding-bottom: 0.75rem;
+          padding-top: 0.75rem;
+          
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropdown.active > .select  + .menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 101;
+}

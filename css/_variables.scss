@@ -1,0 +1,50 @@
+// default light mode if user has it on default
+:root,
+:root.light {
+  --element: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  --textColor: hsl(200, 15%, 8%);
+  --greyTextColor: hsl(200, 15%, 8%);
+  
+}
+
+// if user has default dark
+@media (prefers-color-scheme: dark) {
+  :root {
+    --element: hsl(209, 23%, 22%);
+    --background: hsl(207, 26%, 17%);
+    --textColor: white;
+    --greyTextColor: rgba(255, 255, 255, 0.75);
+  }
+  
+  .moon-svg {
+    display: none;     
+   }
+}
+
+@media (prefers-color-scheme: light) {
+  .sun-svg {
+    display: none;
+  }
+}
+
+// manual switching for dark
+:root.dark {
+  --element: hsl(209, 23%, 22%);
+  --background: hsl(207, 26%, 17%);
+  --textColor: white;
+  --greyTextColor: rgba(255, 255, 255, 0.75);
+}
+
+@mixin flex($content, $aligin) {
+  display: flex;
+  justify-content: $content;
+  align-items: $aligin;
+}
+
+$borderRadiusFilter: 0.35em;
+$padLeftFilter: 1.5rem;
+$boxShadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$maxWidth: 1250px;
+$navPadding: 2rem;
+$navElementsPadding: 1rem;
