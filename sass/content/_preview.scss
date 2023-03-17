@@ -27,11 +27,8 @@ nav {
 main {
   margin-bottom: 4rem;
   .preview-main {
-    //include flex(center, flex-start);
-    //flex-direction: column;
     max-width: 350px;
     display: none;  // switching none/grid for preview page
-    
     
     img {
       width: 100%;

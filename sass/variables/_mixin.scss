@@ -1,0 +1,11 @@
+@mixin flex($content, $aligin) {
+    display: flex;
+    justify-content: $content;
+    align-items: $aligin;
+  }
+
+  @mixin grid($content, $aligin) {
+    display: grid;
+    justify-content: $content;
+    align-items: $aligin;
+  }

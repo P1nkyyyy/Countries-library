@@ -4,8 +4,8 @@ nav {
 
   .country-nav {
     .input-container {
-      background-color: var(--element);
       @include flex(none, center);
+      background-color: var(--element);
       padding: 0 1.5rem;
       box-shadow: $boxShadow;
 
@@ -34,14 +34,13 @@ nav {
       width: 14rem;
       position: absolute;
       top: 13rem;
-      
 
       .select {
+        @include flex(space-between, center);
         background-color: var(--element);
         padding: $navElementsPadding $padLeftFilter;
         margin-bottom: 0.35rem;
         border-radius: $borderRadiusFilter;
-        @include flex(space-between, center);
         cursor: pointer;
         box-shadow: $boxShadow;
 

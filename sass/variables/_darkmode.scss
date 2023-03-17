@@ -35,16 +35,3 @@
   --textColor: white;
   --greyTextColor: rgba(255, 255, 255, 0.75);
 }
-
-@mixin flex($content, $aligin) {
-  display: flex;
-  justify-content: $content;
-  align-items: $aligin;
-}
-
-$borderRadiusFilter: 0.35em;
-$padLeftFilter: 1.5rem;
-$boxShadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-$maxWidth: 1250px;
-$navPadding: 2rem;
-$navElementsPadding: 1rem;
