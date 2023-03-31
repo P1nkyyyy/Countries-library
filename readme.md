@@ -14,3 +14,5 @@
 -Repair button for regions   ✔️<br />    
 -Repair the nav   ❌<br /> 
 -Repair languages with comma   ❌<br />  
+
+<img src="./images/countries-preview.png">
