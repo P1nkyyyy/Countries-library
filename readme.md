@@ -1,19 +1,14 @@
 **https://p1nkyyyy.github.io/Countries-library/#<br />**
 
-### Tasks to complete
+## App for all countries
 
--See all countries from the API on the homepage ✔️<br />
--Search for a country using an input field ✔️<br />
--Filter countries by region ✔️<br />
--Click on a country to see more detailed information on a separate page ✔️<br />
--Toggle the color scheme between light and dark mode (optional) ✔️<br />
--Poupulation with correct format ✔️<br />
+This was bigger project for me where i used API, SASS and vanila JavaScript
 
-**Repair**
+### Everything this App can do:
 
--Complete the responsive (some flags dont work with responsive width) ✔️<br />  
--Repair button for regions ✔️<br />  
--Repair the nav ❌<br />
--Repair languages with comma ✔️<br />
+-Search for specific country
+-Filter countries by region
+-Dark/Light mode
+-After click on the specific country you will see more information about the country
 
 <img src="./images/countries-preview.png">
