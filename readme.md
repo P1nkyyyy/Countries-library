@@ -1,14 +1,14 @@
-**https://p1nkyyyy.github.io/Countries-library/#<br />**
-
-## App for all countries
+## Countries APP🌎
 
 This was bigger project for me where i used API, SASS and vanila JavaScript
 
+Link: **https://p1nkyyyy.github.io/Countries-library/#<br />**
+
 ### Everything this App can do:
 
--Search for specific country
--Filter countries by region
--Dark/Light mode
--After click on the specific country you will see more information about the country
+-Search for specific country <br />
+-Filter countries by region <br />
+-Dark/Light mode <br />
+-After click on the specific country you will see more information about the country <br />
 
 <img src="./images/countries-preview.png">
