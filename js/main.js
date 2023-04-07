@@ -51,7 +51,7 @@ fetch(data)
         // nav
         countryNav.style.display = "block";
         previewNav.style.display = "none";
-        
+
         // content
         countryContainer.style.display = "grid";
         previewMain.style.display = "none";
@@ -65,7 +65,7 @@ fetch(data)
       }
       navMediaReset(minWidth)
       minWidth.addListener(navMediaReset)
-      
+
       // name of the country
       let countryName = countryClone.querySelector(".country-name");
       countryName.innerHTML = common;
@@ -111,14 +111,14 @@ fetch(data)
         countryPreSubRegion.innerHTML = "None";
         if (typeof subregion !== "undefined") {
           countryPreSubRegion.innerHTML = subregion;
-        } 
-        
+        }
+
         let countryPreCapital = document.querySelector(".preview-capital");
         countryPreCapital.innerHTML = "None";
         if (typeof capital !== "undefined") {
           countryPreCapital.innerHTML = capital;
-        } 
-        
+        }
+
         let countryPreTld = document.querySelector(".tld");
         countryPreTld.innerHTML = tld[0];
 
@@ -133,9 +133,11 @@ fetch(data)
         countryPreLang.innerHTML = "None"
         if (typeof languages !== "undefined") {
           countryPreLang.innerHTML = ""
+          let languageStr = "";
           Object.entries(languages).forEach(([_, value]) => {
-            countryPreLang.textContent += value + ' '
+            languageStr += value + ", "
           })
+          countryPreLang.textContent += languageStr.slice(0, -2)
         }
 
         let bordersContainer = document.querySelector(".borders");
