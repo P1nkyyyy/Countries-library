@@ -1,6 +1,6 @@
 ## Countries APP🌎
 
-This was bigger project for me where i used API, SASS and vanila JavaScript
+This was a bigger project for me where i used API, SASS and vanila JavaScript
 
 Link: **https://p1nkyyyy.github.io/Countries-library/#<br />**
 
